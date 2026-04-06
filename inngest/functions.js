@@ -1,4 +1,4 @@
-import { inngest } from "./client.js";
+import { inngest } from "./client";
 import {prisma} from "@/lib/prisma";
 
 //inngest functions to save user data to the database
