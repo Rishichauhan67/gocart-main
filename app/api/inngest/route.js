@@ -10,12 +10,3 @@ export async function GET() {
   const users = await prisma.user.findMany();
   return Response.json({ users });
 }
-
-export const { GET, POST, PUT } = serve({
-  client: inngest,
-  functions: [
-    syncUserCreation,
-    syncUserUpdation,
-    syncUserDeletion
-  ],
-});
