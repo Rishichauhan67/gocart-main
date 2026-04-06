@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useUser, useClerk, UserButton } from "@clerk/nextjs";
+import { useUser, useClerk, UserButton ,SignInButton } from "@clerk/nextjs";
 import { Package } from "lucide-react";
 
 const Navbar = () => {
@@ -109,26 +109,6 @@ const Navbar = () => {
                 </button>
               </div>
             ) : (
-              //   <div>
-              //     <UserButton>
-              //     <UserButton.MenuItems>
-              //       <UserButton.Action
-              //         labelIcon={<ShoppingCart size={16} />}
-              //         label="Cart"
-              //         onClick={() => router.push("/cart")}
-              //       />{" "}
-              //     </UserButton.MenuItems>
-              //   </UserButton>
-              //   <UserButton>
-              //     <UserButton.MenuItems>
-              //       <UserButton.Action
-              //         labelIcon={<Package size={16} />}
-              //         label="My orders"
-              //         onClick={() => router.push("/orders")}
-              //       />{" "}
-              //     </UserButton.MenuItems>
-              //   </UserButton>
-              //   </div>
               <button
                 onClick={openSignIn}
                 className="px-7 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-sm transition text-white rounded-full"
