@@ -30,5 +30,8 @@
     "@tailwindcss/postcss": "^4",
     "@types/ws": "^8.18.1",
     "tailwindcss": "^4"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
