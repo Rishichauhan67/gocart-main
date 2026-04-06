@@ -10,3 +10,4 @@ export const { GET, POST, PUT } = serve({
     syncUserDeletion
   ],
 });
+export const runtime = "nodejs";
