@@ -1,12 +1,18 @@
-export const runtime = "nodejs";
 import { serve } from "inngest/next";
 import { inngest } from "@/inngest/client";
-import { syncUserCreation, syncUserDeletion, syncUserUpdation } from "@/inngest/functions";
-/// app/api/test-db/route.js
+import { syncUserCreation, syncUserUpdation, syncUserDeletion } from "@/inngest/functions";
 
-import { prisma } from "@/lib/prisma";
+const handler = serve({
+  client: inngest,
+  functions: [
+    syncUserCreation,
+    syncUserUpdation,
+    syncUserDeletion
+  ],
+});
 
-export async function GET() {
-  const users = await prisma.user.findMany();
-  return Response.json({ users });
-}
+export const GET = handler;
+export const POST = handler;
+export const PUT = handler;
+
+export const runtime = "nodejs";
