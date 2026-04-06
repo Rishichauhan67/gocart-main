@@ -2,6 +2,9 @@
   "name": "gocart",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "prisma generate && next build",
@@ -31,8 +34,6 @@
     "@tailwindcss/postcss": "^4",
     "@types/ws": "^8.18.1",
     "tailwindcss": "^4"
-  },
-  "engines": {
-    "node": "22.x"
   }
+  
 }
